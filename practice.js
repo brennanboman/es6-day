@@ -16,11 +16,11 @@ const noChange = 100;
 const vocab = ['let', 'var', 'destructuring', 'spread', 'rest']
 
 // change "var" to "const" at index 1 of vocab
-
+vocab[1] = 'const'
 
 // add "arrow function" to the end of vocab
 
-
+vocab.push('arrow function')
 
 ///////////////////////
 /* TEMPLATE LITERALS */
@@ -44,6 +44,12 @@ var fullName = `${first} ${last}`
 // and lovesDevMountain should be set to true.
 // learnES6 should be a method created with object method shorthand that returns "This is awesome!"
 
+var me = {
+	first,
+	last,
+	learnES6,
+	lovesDevMountain: true
+}
 
 
 // using computed property names create a new object named flipped where the keys are your first and last name
@@ -85,6 +91,9 @@ const lastFive = [ 6, 7, 8, 9, 10 ];
 
 // using the spread operator, create a new array named oneThroughTen.
 // You should use the above arrays (and 2 missing digits of your own)
+
+var oneThroughTen = [...firstThree, 4, 5, ...lastFive]
+
 
 
 // do not modify

@@ -13,7 +13,7 @@ if ( true ) {
 const noChange = 100;
 
 // declare a new constant named vocab with the value of [ "let", "var", "destructuring", "spread", "rest" ]
-
+const vocab = ['let', 'var', 'destructuring', 'spread', 'rest']
 
 // change "var" to "const" at index 1 of vocab
 
@@ -28,11 +28,12 @@ const noChange = 100;
 
 // Declare 2 new variables, first and last, and assign them your first and last name.
 
-
+var first = 'brennan';
+var last = 'boman';
 
 // Declare the variable fullName and set it equal to your full name using template literals
 
-
+var fullName = `${first} ${last}`
 
 //////////////////////
 /* OBJECT LITERALS */

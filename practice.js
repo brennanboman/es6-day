@@ -6,7 +6,7 @@
 
 // Rewrite the following line so that inner is scoped to the if statement.
 if ( true ) {
-	var inner = "Inner!";
+	let inner = "Inner!";
 }
 
 // declare a variable named noChange that cannot be re-assigned and give it a value of 100.

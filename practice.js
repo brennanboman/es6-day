@@ -10,7 +10,7 @@ if ( true ) {
 }
 
 // declare a variable named noChange that cannot be re-assigned and give it a value of 100.
-
+const noChange = 100;
 
 // declare a new constant named vocab with the value of [ "let", "var", "destructuring", "spread", "rest" ]
 

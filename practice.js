@@ -47,14 +47,18 @@ var fullName = `${first} ${last}`
 var me = {
 	first,
 	last,
-	learnES6,
-	lovesDevMountain: true
+	lovesDevMountain: true,
+	learnES6: () => "This is Awesome!"
 }
 
 
 // using computed property names create a new object named flipped where the keys are your first and last name
 // and the values are "first" and "last"
 
+var flipped = {
+	[first]: 'first',
+	[last]: 'last'
+}
 
 //////////////////////////////
 /* ASSIGNMENT DESTRUCTURING */
@@ -70,7 +74,7 @@ const destructuring = {
 // using assignment destructuring create two new variables, objects and arrays,
 // with the values taken from the above object
 
-
+const {objects, arrays} = destructuring;
 
 
 // do not modify
@@ -79,7 +83,7 @@ const vocabAgain = [ "let", "const", "destructuring", "spread", "rest", "arrow f
 // using assignment destructuring, create three variables notVar, alsoNotVar, and everythingElse
 // notVar should be "let", alsoNotVar should be "const", and everythingElse should contain the rest of the array.
 
-
+const [notVar, alsoNotVar, ...everythingElse] = vocabAgain;
 
 ////////////
 /* ARRAYS */
@@ -92,7 +96,7 @@ const lastFive = [ 6, 7, 8, 9, 10 ];
 // using the spread operator, create a new array named oneThroughTen.
 // You should use the above arrays (and 2 missing digits of your own)
 
-var oneThroughTen = [...firstThree, 4, 5, ...lastFive]
+const oneThroughTen = [...firstThree, 4, 5, ...lastFive]
 
 
 
@@ -109,14 +113,14 @@ function whatToUse( past, present, future ) {
 // using the spread operator, pass each element of jsVersions as an individual argument to whatToUse
 // and save the return value in a variable named currentJS.
 
-
+const currentJS = whatToUse(...jsVersions)
 
 ///////////////
 /* FUNCTIONS */
 ///////////////
 
 // modify greeter to greet Anonymous if no name is passed.
-function greeter( name ) {
+function greeter( name = "Anonymous" ) {
 	return `Hi ${ name }!`
 }
 
@@ -125,12 +129,23 @@ function greeter( name ) {
 // and returns number to the power of exponent.
 // if no exponent is passed, the exponent should be two
 
+const toPower = (number, exponent = 2) => number ** exponent;
 
 // using rest parameters, write a function named evenOdd that takes in
 // any number of parameters and returns an object with two properties - even and odd.
 // this function should check each parameter and push it to the appropriate property.
 
-
+function evenOdd(...params) {
+	let newObj = {};
+	params.forEach(number => {
+		if(number % 2 === 0) {
+			newOj.even.push(number)
+		} else {
+			newObj.odd.push(number)
+		}
+	})
+	return newObj;
+}
 
 // write a function named multiply that takes in a num parameter and an arbitrary amount of
 // additional numbers. This function should return an array of each additional number
